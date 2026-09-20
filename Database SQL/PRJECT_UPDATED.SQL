@@ -1,0 +1,952 @@
+CREATE TABLE EMPLOYEE(
+EMPLOYEE_NO INT PRIMARY KEY,
+EMPLOYEE_MACHINE_CODE INT,
+EMPLOYEE_NAME VARCHAR(35),
+FATHER_NAME VARCHAR(35),
+CNIC_NO VARCHAR(15),
+MOBILE_NO VARCHAR(12),
+HOME_ADDRESS VARCHAR(20),
+DEPARTMENT VARCHAR(20),
+DESIGNATION VARCHAR(20),
+EDUCATION VARCHAR(20),
+JOINING_DATE DATE,
+REFERENCE VARCHAR(20),
+JOB_STATUS VARCHAR(7),
+DATE_OF_BIRTH DATE,
+AGE INT,
+DATE_OF_DISMISS DATE,
+FACTORY_ID INT FOREIGN KEY REFERENCES FACTORY(FACTORY_ID)
+);
+
+ALTER TABLE EMPLOYEE
+ALTER COLUMN JOB_STATUS VARCHAR(10);
+ALTER TABLE EMPLOYEE
+ALTER COLUMN HOME_ADDRESS VARCHAR(100);
+
+
+
+INSERT INTO EMPLOYEE
+VALUES
+(67,NULL,'Saqib Ali','Manzor Hussain','33106-8679105-5','0309-5150086','Faisal Town Pattoki','Enamel plant','Helper',NULL,'7/3/2023','Sabir Lifter Driver','Finished',NULL,125,NULL),
+(68,NULL,'Adeel Arif','M Arif','33203-8102604-7','0302-3430237','Sathiyanwala Ward 8 Shorkot District, Jhang','Laboratory','Lab Assist.',NULL,'7/5/2023','Advertisement','Active',NULL,125,NULL),
+(69,NULL,'M Ismaeel','Aftab Hussain','35302-1186493-5','0304-0683729','Sabri Colony Street No.6 Okara','Wrapping ','Helper',NULL,'7/5/2023','Saqlain EC plant','Finished',NULL,125,NULL),
+(70,NULL,'Qasim','Afzal Hussain','38303-8640189-1','0304-9124320','Chak No 15 DB Tehsil piplan District Mianwali','Extrusion','Operator',NULL,'7/6/2023','Afzal Welder','Active',NULL,125,NULL),
+(71,NULL,'Arif Munir','Munir Ahmad','35501-0474676-1','0303-3927506','Chak No.573 Nankana sb','Extrusion','Helper',NULL,'8/1/2023','Advertisement','Finished',NULL,125,NULL),
+(72,NULL,'M Hassan Raza','Hafiz Hanif fani','36501-8375103-3','0345-4277260','Tibba Noor pur,chichawatni District Sahiwal','Extrusion','Helper',NULL,'8/16/2023','Advertisement','Finished',NULL,125,NULL),
+(73,NULL,'Muhammad Talha','Ghulam Mustafa','35202-8388236-1','0319-1589857','Railway Colony Raiwind, District Lahore','Wrapping ','Helper',NULL,'8/18/2023','Advertisement','Finished',NULL,125,NULL),
+(74,NULL,'M saleem','M Nawaz khan','41105-9236112-3','0345-3517167','Eid ga Tonsa District Dera Ghazi khan','Scrape Godown','Helper',NULL,'8/19/2023','Younus','Finished',NULL,125,NULL),
+(75,NULL,'M Husnain','M Ashraf','38402-9462506-5','0318-1435484','Rasool pura colony Farooka Tehsil &District Sargoda','Extrusion','Helper',NULL,'8/28/2023','Azhar','Active',NULL,125,NULL),
+(76,NULL,'M Shahid ',' Fida Hussain','37101-8448924-7','0311-5303181','Haji Shah,Po Box Tehsil o District Atak','Wrapping ','Helper',NULL,'9/6/2023','Shehzad Security','Finished',NULL,125,NULL),
+(77,NULL,'M Ismaeel','M Qurban','31201-2306076-3','0300-2333224','House No-9 Qurash Abad ahmad pur District Bahawalpur.','Mechanical','Fitter',NULL,'9/15/2023','Ramzan upcast','Finished',NULL,125,NULL),
+(78,NULL,'Ahsan sher','Ali sher khan','35302-5769095-9','0326-0443355','Wazire wala Chak no-5/4L  District okara','Enamel plant','Operator',NULL,'9/19/2023','JCO Ali sher plot-33','Finished',NULL,125,NULL),
+(79,NULL,'M Luqman','M Yousaf','35302-4059067-7','0306-4641143','PO Office Okara chak no 39/3 R Tehsil & District Okara','Upcast Plant','Operator',NULL,'9/25/2023','Ghulam Hussain Okara','Finished',NULL,125,NULL),
+(80,NULL,'M Dawood','M Hussain','33104-7611668-9','0308-9179826','Jaranwala','Enamel plant','Operator',NULL,'9/25/2023','Advertisement','Active',NULL,125,NULL),
+(81,NULL,'Mehmood Ali','Mehbob Alam','35204-0424269-9','0325-4142253','Mohalla Khan colony Po box Raiwind District Lahore','Enamel plant','Helper',NULL,'9/25/2023','Talha Raiwind','Finished',NULL,125,'10/24/2023'),
+(82,NULL,'Waris Ali','Noor Ahmad','36603-5191156-7','0327-6228772','Chak No-19WB Tehsil O District Vihari','Extrusion','Helper',NULL,'9/26/2023','Advertisement','Finished',NULL,125,'9/27/2023'),
+(83,NULL,'M Imran','M Husnain','36603-0449548-3','0326-0248019','Po Office Chak No-21 WB Tehsil o district Vihari','Enamel plant','Helper',NULL,'9/26/2023','Advertisement','Finished',NULL,125,'9/27/2023'),
+(84,NULL,'Farhan Ali','Zafar Iqbal','31104-4967717-3','0303-2701101','Hashim colony mirza town,Gali 3, Haroonabad District Bahawalpur','Extrusion','Helper',NULL,'10/3/2023','Advertisement','Finished',NULL,125,'10/11/2023'),
+(85,21013.0,'Zia Ul Haq','M Ali','36603-6104038-1','0321-6533065','Po Office Chak No-65 WB Tehsil o District Vehari','Upcast Plant','Helper',NULL,'10/3/2023','Imam Bakhsh','Active',NULL,125,NULL),
+(86,NULL,'Muhammad Amer','Ghulam Mustafa','35202-7900447-9','0309-7758232','Railway Colony Raiwind, District Lahore','Enamel plant','Helper',NULL,'10/5/2023','Talha Brother','Finished',NULL,125,'10/24/2023'),
+(87,24033.0,'M Hassan Ijaz','M Ijaz','35501-0735269-5','0309-0184687','Garmola Po office Chak No.12 GB Tehsil & District Nankana sb','Electrical ','Operator',NULL,'10/9/2023','Advertisement','Active',NULL,125,NULL),
+(88,24034.0,'Rizwan Ali','Liyaqat Ali','33105-7898211-9','0328-7836638','Chak No-219 GB po office Tehsil Samundri District Faislabad','General','Helper',NULL,'10/11/2023','Nazim','Finished',NULL,125,'10/12/2023'),
+(89,NULL,'Qurban hussain','M Akram','36303-2371618-9','0302-7483160','Basti Nawab shah Araiyan wala Tehsil o District Multan','Extrusion','Operator',NULL,'10/16/2023','Younus UM2','Finished',NULL,125,'10/17/2023'),
+(90,NULL,'Umer Farooq','Noor Ahmad','35302-9500892-7','0308-5659771','Chak No.39/3 R District Okara','Enamel plant','Helper',NULL,'10/16/2023','Luqman upcast','Finished',NULL,125,'10/17/2023'),
+(91,NULL,'Usman Ali','Shoukat Ali','35301-3200762-3','0320-4725085','Mohalla shah mir chowk Hujra shah Muqeem Tehsil Depalpur District Okara','General','Helper',NULL,'11/1/2023','Nazim ','Finished',NULL,125,NULL);
+
+
+INSERT INTO EMPLOYEE
+VALUES
+(92,NULL,'Muhammad Azam','Nazir Ahmad','35401-0578631-9','0301-2960479','Kotli Ray abu bakar Po Office ,Tehsil o district Kasur.','Driver','Lifter Operator','Nill','11/1/2023','Zafar Driver','Finished',NULL,125,NULL),
+(93,NULL,'Zubair Abbas','Tahir abbas ','33204-0509503-3','0306-1484506','Chah Machana Po office Pir Abdul Rehman Shumali Tehsil Ahmad pur siyal,District Jhang','Enamel plant','Operator','DAE (Mechanical)','11/6/2023','Advertisement','Finished',NULL,125,NULL),
+(94,NULL,'Abdullah Nazir','M Nazir','35204-0376525-7','0301-4625926','Madina colony Po Office Raiwind District Lahore.','Scrape Godown','Helper','Nill','11/15/2023','Azam Lifter Driver','Finished',NULL,125,NULL),
+(95,13052.0,'Taqi Raza','Akhtar Abbas','33204-0436959-9','0309-7281678','Mohalla Didhniyawala Garh Mahraja, Tehsil Ahmad Pur,District Jhang.','Extrusion','Operator','DAE (Mechanical)','11/16/2023','Zubair EC Plant','Finished',NULL,125,NULL),
+(96,16036.0,'Waseem Abbas','Naseer Ahmad','36601-3515701-1','0325-1589586','Old Sudeera Po office Farooq abad Tehsil Burewala , District Vehari.','Drawing Machine','Helper','Matric','11/20/2023','Punnu','Finished',NULL,125,NULL),
+(97,NULL,'Zeeshan Aslam','M Aslam Khan','36103-5855569-7','0343-0619233','kacha Khoo Chak NO 26/10 R District Khanewal','General','Helper','Matric','11/29/2023','Advertisement','Finished',NULL,125,NULL),
+(98,NULL,'Shafqat Hussain','Bashir Ahmad','36601-4303904-9',NULL,'Daak Khana khas Farooq abad, Sldeera Atar Tehsil burewala District vehari','Upcast plant','Helper','F.A IT','12/15/2023','Waseem(drawing)','Finished',NULL,125,NULL),
+(99,NULL,'Ahmad Hassan','M munir Shahid','36601-2833274-3',NULL,'Daak khana khas Sahuka Sldire Hathaar Tehsil burewala District vehari','Upcast plant','Helper','F.A IT','12/15/2023','Waseem(drawing)','Finished',NULL,125,NULL),
+(100,NULL,'WASEEM AKRAM','M AKRAM','33205-0477165-9','0303-5364530','Po office JabboAna Tehsil 18 Hazari,District Jhang','Upcast Plant','Helper','Nill','1/9/2024','Tasawar Abbas','Active',NULL,125,NULL),
+(101,13056.0,'Muhammad Imran','Muhammad Sabir','35301-9370566-3','0307-7551706','Atari Road Mohalla maqsood Alam,Hujra shah Muqeem , Tehsil Depalpur,District Okara','Upcast Plant','Helper','Nill','1/12/2024','Ali Ahmad','Finished',NULL,125,'1/14/2024'),
+(102,NULL,'M Waseem','Ghulam Fareed','32203-4142825-5','0303-2559201','Basti kalar wala Po office Kot Sultan Tehsil o District Layya','Scrape Godown','Helper','Middle','1/30/2024','Younus','Active',NULL,125,NULL),
+(103,NULL,'Rana Abdul Ghafar','Rana Shoukat Ali','35202-3783949-3','0310-4687240','Basti Amin pura Raiwind District Lahore','Driver','Operator','Middle','2/1/2024','Advertisement','Finished',NULL,125,'2/2/2024'),
+(104,NULL,'Abaad Hussain Shah','Mehndi Shah','36501-5895025-9','0321-4737384','Chak no 47/12 L po office Tehsil Chichawatni District Sahiwal','Gardner','Mali','U-Matric','2/1/2024','Allah Ditta','Finished',NULL,125,NULL),
+(105,NULL,'Hafeez Ullah','Irshad Ali','36502-9260861-1','0306-6914669','Chak No.186/9 L Tehsil District Sahiwal','General','Helper','Primary','2/15/2024','Abbas EC','Finished',NULL,125,NULL),
+(106,17033.0,'SULTAN MUHAMMAD','RAHMATULLAH','42000-0466014-3','0327-4297811','Tehsil Jaranwala,District Faisalabad','Enamel Plant','Operator','BA','3/8/2024','Advertisement','Finished',NULL,125,NULL),
+(107,NULL,'M Rehan Ashraf','M Ashraf','33304-0446266-1','0321-2563746','Po office Chak No.704 GB Gul Pur,Tehsil pir Mahal District Toba Taksingh','Enamel plant','Helper','Matric','4/25/2024','Imam Bakhsh','Active',NULL,125,NULL),
+(108,16037.0,'N Naeem','Naseer Ahmad','36601-3525201-1','0325-1589586','Old Sudeera Po office Farooq abad Tehsil Burewala , District Vehari.','Extrusion','Helper','Middle','5/2/2024','Waseem Abbas','Finished',NULL,125,NULL),
+(109,16038.0,'M Waseem','M Ashraf','33104-5177659-1','0306-5129006','Po office Chak No.126 GB Pin Janjoa Tehsil Jaranwala,District Faislabad','Enamel plant','Helper','Matric','5/2/2024','Advertisement','Active','4/8/2000',25,NULL),
+(110,NULL,'Yasir Ilyas','M Ilyas','82701-0346063-5','0344-8860762','Kather Coona Azad Kashmir District Jehlum Velly.','Laboratory','Operator','Matric','5/4/2024','Advertisement','Active','12/1/1992',32,NULL),
+(111,NULL,'M Javed','Jan Muhammad','31102-4963754-5','0300-0060517','Basti Mehr Abad, Tehsil Chishtiyan District Bahawal Naghar','General','Helper','Primary','5/9/2024','Allah Ditta','Active',NULL,125,NULL),
+(112,16040.0,'Sajid  GUJJAR','Ghulam Qadir','35302-8240798-1','0307-4963299','Po Office Chak No 5/4 L Tehsil o District Okara','General','Helper','Primary','5/13/2024','Advertisement','Active','1/1/1984',41,NULL),
+(113,13062.0,'M Shakeel',' Qadir Baksh','32103-0290378-1','0332-6066469','Tonsa Dera Ghazi Khan','General','Helper','Middle','5/14/2024','Saleem Scrape','Active',NULL,125,NULL),
+(114,NULL,'Daniyal Maseeh','Daud Maseeh',NULL,'0305-9767245','Nahla Gao,Raiwind','General','Helper','Middle','5/15/2024','Sahil Maseeh','Finished',NULL,125,NULL),
+(115,13063.0,'Umair Allah Ditta','Allah Ditta','35202-7399943-5','0304-0599478','Nahla Gao,Raiwind','Upcast Plant','Helper','Primary','5/16/2024','Allah Ditta','Active',NULL,125,NULL),
+(116,13064.0,'Shehbaz Mushtaq','Mushtaq Ahmad','36603-8583416-3','0302-6509199','Loddan Vehari','Wrapping ','Helper','Middle','5/16/2024','Allah Ditta ','Active',NULL,125,NULL);
+
+INSERT INTO EMPLOYEE
+VALUES
+(117,13065.0,'M Shahzaib ','M Ashraf','35303-7343003-3','0307-1706314','14/1 AL Renala Khurd,District Okara','Scrape Godown','Helper','Primary','5/16/2024','Maryam Bibi','Finished',NULL,125,NULL),
+(118,13066.0,' Haseeb ul Salam','Tanveer Ahmad','82701-0416059-1','0340-8333961','Po Office Chanari Cona,Tehsil Hatiya Bala District Jehlum Velley','Wrapping ','Helper','Primary','5/18/2024','Yasir Ilyas Lab','Active','6/22/2001',23,NULL),
+(119,NULL,'M SAJID ANWAR','M ANWAR','38404-1290474-3','0301-6760805','Ward No 8 Shah pur Tehsil Shah pur,District Sargodha','Driver','Operator','Middle','5/20/2024','Advertisement','Active',NULL,125,NULL),
+(120,13007.0,'Mansab Ali','Shah Din','32202-5175652-7','0309-4374460','Chak No 88 ML ,Tehsil Karor Lal Essan District Layyah','Cold Storage','Operator','Middle','6/21/2024','Paloos ','Active',NULL,125,NULL),
+(121,NULL,'Hamza Suleman','M Suleman','82202-1909299-5','0347-3349458','Po Office Chanari Cona,Tehsil Hatiya Bala District Jehlum Velley','Wrapping ','Helper','Matric','6/22/2024','Yasir Ilyas Lab','Active',NULL,125,NULL),
+(122,NULL,'M Ijaz Nazir','M Nazir','35303-4875747-7','0308-2954941','Chak No 18/1 L Tehsil Renal khurd, District Okara.','Enamel plant','Helper','Matric','7/5/2024','Sajid Gujjar','Finished',NULL,125,NULL),
+(123,NULL,'Mubashir Gujjar',NULL,NULL,NULL,NULL,'Strip Section','Operator','FA','7/16/2024',NULL,NULL,NULL,125,NULL),
+(124,NULL,'Shazam Umar','sabir Ali','38104-9326645-1','0302-3689185','Chak No 17 TDA AML Tehsil Mankera, District Bhakar','Laboratory','Junior Operator','DAE (Mechanical)','7/22/2024','Advertisement','Active',NULL,125,NULL),
+(125,NULL,'M Tufail','M Tanveer Ahmed','82701-0415144-7','0340-8333961','Po Office Chanari Cona,Tehsil Hatiya Bala District Jehlum Velley','Wrapping ','Helper','Middle','8/5/2024','Haseeb ul Salam','Active',NULL,125,NULL),
+(126,NULL,'M Asif ','Ghulam Serwar','32103-2124264-9','0332-6059932','Cha Haider wala Baron tonsa District Dera Ghazi Khan','Wrapping ','Helper','Middle','8/17/2024','Saleem Scrape','Finished',NULL,125,NULL),
+(127,NULL,'M Numan Babar','Liyaqat Ali','35102-4502498-3','0304-4402049','Araiyan Po Office District Lahore','Enamel plant','Operator','Matric','8/17/2024','Ex Employee','Finished',NULL,125,NULL),
+(128,NULL,'M Naveed Alam','Noor Muhammad','35102-5233744-9','0306-2263186','Targa Po office Kadyond Balyana,Tehsil o District Kasur.','Mechanical','Welder','Nill','8/17/2024','Numan EC Plant','Finished',NULL,125,NULL),
+(129,NULL,'Naseebullah','Abdul Latif','36104-8320042-7','0304-6702761','Chak No.110/15 Tehsil Mian Channu, District Khanewal.','Enamel plant','Operator','Matric','8/20/2024','Ex Employee','Active',NULL,125,NULL),
+(130,NULL,'Ali Raza','Tariq','35202-0741297-7','0323-2066873','Shahdrah Wandala Road Tehsil Faroz wala District Shekhupura','Wrapping ','Helper','Middle','8/26/2024','Tariq','Finished',NULL,125,NULL),
+(131,NULL,'Husnain Abbas','Sabir Hussain','32203-6985789-1','0322-6762472','Pahar pur Tehsil o District Layyah','Drawing','Helper','Middle','9/10/2024','Younus','Finished',NULL,125,NULL),
+(132,NULL,'M Yaseen','M Ashraf','34301-0710163-5','0340-4679185','Main bazar New mandi Tehsil District Hafiza bad','Wrapping ','Helper','Middle','9/21/2024','Naveed Furnace','Finished',NULL,125,NULL),
+(133,NULL,'Sanwal Islzam','M Islam','31203-2035250-5','0328-4254203','Basti Manzor Abad Qaim pur Tehsil Hasilpur District Bahawalpur','Cold Storage','Helper','Middle','10/5/2024','Pervaz','Active',NULL,125,NULL),
+(134,NULL,'Zubair Younus','M Younus','36103-5907768-7','0329-7503933','Basti Khalil abad Khanewal,','Wrapping ','Helper','Middle','10/23/2024','Haroon EC Plant','Finished',NULL,125,NULL),
+(135,NULL,'Shahzad Khadim','Khadim hussain','35102-3582079-5','0305-3544404','Haweli rustam khan wali Bhamba kala Tehsil kot radha kishan,District kasur','HR','Assistant','BA','12/17/2024','Advertisement','Finished',NULL,125,NULL),
+(136,NULL,'Mehtab hussain','Zawar Hussain','36104-9501306-9','0306-9882832','Near darbar Rehmat ali shah Kacha Tulamba Tehsil Mian chanu District Khanewal','Laboratory','Assistant','Bsc','12/23/2024','Advertisement','Finished',NULL,125,NULL),
+(138,NULL,'Fakhar Abbas','M Manzor','33304-0444443-1','0343-1411744','Pir mahal chak no 750 Distric Toba ','Upcast Plant','Helper','Matric','1/18/2025','Advertisement','Finished','4/20/2008',17,NULL),
+(139,NULL,'Farhan Ali','M Khurshed','33203-9612228-7','0309-8391250','Mirali wala Shorkot District Jhang','Extrusion','Helper','Middle','1/22/2025','Adeel Lab','Active',NULL,125,NULL),
+(140,NULL,'Atif Naeem','Naeem Akhtar','35102-1102278-5','0335-4631906','Praim nagar Tehsil kot radha kishan, District Kasur','General','Helper','Primary','1/22/2025','Sajid Lifter Driver','Active',NULL,125,NULL),
+(141,NULL,'Sajid Aslam','M Aslam lohar',NULL,NULL,NULL,NULL,NULL,NULL,'1/22/2025','Baba Aslam','Active',NULL,125,NULL),
+(142,NULL,'Haroon Aslam','M Aslam','35302-4194183-5','0308-8809218','Cant chak no 18/4L okara','General','Helper','Metric','1/22/2025','Sajid gujjar','Finished','8/20/2005',19,NULL),
+(143,NULL,'M Hanif ','Sher Muhammad','35102-1821103-7','0306-6817060','Nawa kila Khudiya Khas District Kasur','Mechanical','Helper','FA','1/27/2025','Ameen Muqadam','Finished','11/10/1995',29,NULL),
+(144,NULL,'M Mudassir','Khadim hussain','31203-2329282-7','0323-6626783','Kacha Banghla Qaim pur Tehsil Hasilpur district Bahawalpur','General','Helper','Primary','1/27/2025','Pervaiz Nahla','Active','7/1/2007',17,NULL),
+(145,NULL,'M Bashir Mughal','Khair Ali Mughal','82202-7949929-5','0345-4852854','Po Office Chanari Cona,Tehsil Hatiya Bala District Jehlum Velley','Upcast Plant','Helper','Matric','1/28/2025','Haseeb ul Salam','Finished','7/22/1980',44,NULL),
+(146,NULL,' Usman Anwar','Anwar Baig','36101-4101198-7','0308-6925133','Po office Thatha Chak No.33/10 R Tehsil Jahaniya District Khanewal','Enamel plant','Operator','DAE Chemical','2/10/2025','Advertisement','Finished','4/15/1996',29,NULL),
+(147,NULL,'M Mujahid sharif','M Sharif','36501-2524377-5','0301-3931811','po office Chak No.111/7 R Tehsil chichawatni District Sahiwal','Extrusion','Helper','Matric','2/24/2025','Haroon EC Plant','Active','8/12/1995',29,NULL),
+(148,NULL,'Ali Hassan Afzal','Afzal Hussain','38303-0712049-9','3700045018','Po office No.15 DB Chak No.13 DB Tesil Piplan,District Mianwali','Furnace','Helper','Primary','2/25/2025','Afzal Welder','Active','3/24/2006',19,NULL),
+(149,NULL,'Zahid hussain','M Hassan','35301-0608602-9','0317-6132304','Street No 4 Zia ul din Colony Depalpur District Okara','Laboratory','Assistant','Bsc.Hons','3/1/2025','Advertisement','Finished','4/10/2020',5,'3/2/2025'),
+(150,NULL,'M Fiaz','M Mushtaq','35202-2797202-9','0327-0702082','Ghaniyeki Phatak,Tehsil Raiwind District kasru','Drawing','Helper','Middle','3/8/2025','Mushtaq JF','Active',NULL,125,NULL),
+(151,NULL,'M Younus','Qadir Bakhsh','32303-6561643-1','0301-0444512','Near Mosque Ghosiya Naiya wala Ihsan pur Tehsil kot addu District Muzafar garh','Laboratory','Assistant','Bsc.Chemistery','3/11/2025','Advertisement','Active','9/20/1995',29,NULL),
+(152,NULL,'M Abdullah','M Riaz','35104-0501776-5','0301-0663402','Chak No.59 Kot rasha kishan District Kasur','Plot-33 UM-4','Assistant','Matric','3/11/2025','Advertisement','Active','5/6/2004',21,NULL),
+(153,NULL,'M Junaid','Raza Khan','14301-2810653-3','0336-9683101','Kamal Khel Po office Tehsil o District Kohat','Wrapping ','Helper','Matric','4/12/2025','Tariq Sec.','Active','9/2/2001',23,NULL),
+(154,NULL,'Zohaib saleem ','Saleem shah','35201-3593751-9','0324-0492961','mohalla Makkah colony,madina town Harbans pura Lahore cant.District Lahore.','Laboratory','Junior Operator','DAE Mechanical','4/15/2025','Advertisement','Active','2/10/2007',18,NULL),
+(155,NULL,'M Israr Javed','Shahabudin','35102-6590026-3','0325-8188913','Po Office Badian Kreka,Tehsil Lahore cantt.District Lahore','Enamel plant','Junior Operator','DAE Electrical','4/16/2025','Advertisement','Active','11/11/1999',25,NULL),
+(156,NULL,'Shehbaz Ahmad','Sheikh Hafeez','35103-9745657-1','0301-4478189','House no.93/9 old mandi Pattoki District Kasur','Wrapping ','Helper','Matric','4/17/2025','Sajid RW','Active','5/23/1990',34,NULL),
+(157,NULL,'M Ahsan Khan','Ahmad Khan','31105-4936153-9','0301-1055537','Dubbar shakar Po office Tehsil Minchanabad,District Bahawalnagar','Enamel plant','Helper','Fsc','4/17/2025','Naveed Furnace','Active','2/5/2004',21,NULL),
+(158,NULL,'Numan Ali','M Arshad','35104-0487462-7','0326-1121171','Prem Nagar, Tehsil kot Radha kishan District Kasur','Enamel plant','Helper','FA','4/17/2025','Sajid Lifter Driver','Active','12/18/2004',20,NULL),
+(159,16059.0,'Zain Ali','Sabir Ali','38104-6390088-3','0306-7735217','Po office Chak No,217 TDA,Tehsil Mankera District Bhakar','Extrusion','Helper','FA','4/19/2025','Shazam Brother','Active','9/27/2000',24,NULL),
+(160,16058.0,'M Usman','Abdul Shakoor','31203-7543941-3','0306-7735217','Chak No. 60-61 Fateh Hasilpur,District Bahawalpur','Drawing','Helper','Matric','4/19/2025','Shazam Kzn','Active','12/3/2004',20,NULL),
+(161,16057.0,'Ali Zain','M Arshad','35202-1828831-5','0300-8188864','Near Mosque Khizar wali sunder Road Raiwind','Wrapping ','Helper','Matric','4/19/2025','Arshad Honda ','Active','8/15/2006',18,NULL),
+(162,NULL,'M Ishtiyaq','M Mushtaq','36401-7085201-3','0305-5722326','New Shah nawaz colony Pakpatan Road Arif wala','Laboratory','Lab Assist.','FA','4/21/2025','Rashid Elect.','Active','7/5/2002',22,NULL);
+SELECT * FROM EMPLOYEE;
+
+CREATE TABLE PARTY(
+PARTY_ID INT PRIMARY KEY ,
+PARTY_NAME VARCHAR(50),
+);
+
+
+CREATE TABLE FACTORY(
+    FACTORY_ID INT PRIMARY KEY,
+    FACTORY_NAME VARCHAR(100) NOT NULL
+);
+
+ALTER TABLE EMPLOYEE
+ADD FACTORY_ID INT;
+
+ALTER TABLE EMPLOYEE
+ADD CONSTRAINT FK_FACTORY_ID 
+FOREIGN KEY (FACTORY_ID)
+REFERENCES FACTORY(FACTORY_ID);
+
+CREATE TABLE MATERIAL(
+MATERIAL_NO INT PRIMARY KEY,
+PARTY_NAME VARCHAR(30),
+DESCRIPT VARCHAR(50),
+DATE_ DATE,
+QUANTITY INT,
+);
+ALTER TABLE MATERIAL
+ADD MATERIAL_CATEGORY VARCHAR(30);
+
+ALTER TABLE MATERIAL
+ALTER COLUMN PARTY_NAME VARCHAR(50);
+
+CREATE TABLE RAW_MATERIAL(
+MATERIAL_NO INT PRIMARY KEY,
+MATERIAL_TYPE VARCHAR(20),
+UNIT VARCHAR(15),
+FOREIGN KEY (MATERIAL_NO)  REFERENCES MATERIAL(MATERIAL_NO)
+);
+
+CREATE TABLE FINISHED_MATERIAL(
+MATERIAL_NO INT PRIMARY KEY,
+PRODUCTION_TYPE VARCHAR(20),
+FOREIGN KEY (MATERIAL_NO)  REFERENCES MATERIAL(MATERIAL_NO)
+);
+
+
+ALTER TABLE RAW_MATERIAL
+ALTER COLUMN MATERIAL_TYPE VARCHAR(25);
+
+ALTER TABLE PARTY
+ALTER COLUMN PARTY_NAME VARCHAR(100);
+
+ALTER TABLE MATERIAL
+ALTER COLUMN PARTY_NAME VARCHAR(100);
+
+INSERT INTO MATERIAL
+VALUES 
+(507,'UM-1','Bare Copper Strip 1.1x5.5','1/1/2025',640.9,'RAW'),
+(508,'UM-2','Aluminium Wire 2.08','1/1/2025',2205.0,'RAW'),
+(509,'UM-2','Copper wire 4.2mm','1/1/2025',226.0,'RAW'),
+(510,'UM-2','Copper Scrape ','1/1/2025',131.0,'RAW'),
+(511,'Fine Daily karachi (Reprocessing)','Copper Scrape ','1/3/2025',2998.4,'RAW'),
+(512,'Power Tech','Empty iron reels','1/3/2025',9.0,'RAW'),
+(513,'UM-3 Ec Hall','Copper Scrape ','1/4/2025',357.0,'RAW'),
+(514,'UM-1','Copper wire 4mm','1/4/2025',5196.0,'RAW'),
+(515,'UM-1','Bare Copper Strip 1.1x5.5','1/4/2025',134.8,'RAW'),
+(516,'Power Tech','Empty iron reels','1/4/2025',9.0,'RAW'),
+(517,'Power Tech','Empty iron reels','1/6/2025',9.0,'RAW'),
+(518,'Power Tech','Empty iron reels','1/7/2025',8.0,'RAW'),
+(519,'UM-1','Copper wire 4mm','1/8/2025',5478.0,'RAW'),
+(520,'UM-1','Copper wire 4mm','1/9/2025',4055.0,'RAW'),
+(521,'PEL','Empty iron reels HV','1/9/2025',12.0,'RAW'),
+(522,'PEL','Empty iron reels HV','1/10/2025',5.0,'RAW'),
+(523,'UM-3 Ec Hall','Copper Scrape ','1/11/2025',765.0,'RAW'),
+(524,'UM-2','Aluminium Wire 2.08','1/11/2025',2270.0,'RAW'),
+(525,'Jili Mechanical','0.850mm Rejection','1/17/2025',66.22,'RAW'),
+(526,'UM-3 Ec Hall','Copper Scrape ','1/18/2025',1415.0,'RAW'),
+(527,'UM-2','Aluminium Wire 2.08','1/20/2025',610.0,'RAW'),
+(528,'UM-2','Aluminium Wire 2.08','1/22/2025',1546.0,'RAW'),
+(529,'UM-2','Copper Scrape ','1/22/2025',90.0,'RAW'),
+(530,'Sky Power','Rejection 1.200mm','1/23/2025',467.14,'RAW'),
+(531,'UM-3 Ec Hall','Copper Scrape ','1/25/2025',1170.0,'RAW'),
+(532,'UM-1','Copper Wire 4mm','1/27/2025',5399.0,'RAW'),
+(533,'Fine Daily karachi (Reprocessing)','Copper Scrape ','1/27/2025',3003.1,'RAW'),
+(534,'Ali Containers','Copper Scrape ','1/28/2025',589.35,'RAW'),
+(535,'Kelani cables via Karachi','Copper wire 0.120mm','1/29/2025',1517.66,'RAW'),
+(536,'UM-3 Ec Hall','Copper Scrape ','1/31/2025',1950.0,'RAW'),
+(537,'UM-1','Copper wire 4mm','1/31/2025',6480.0,'RAW'),
+(538,'UM-1','SWG-19','1/31/2025',9.08,'RAW'),
+(539,'UM-1','SWG-23','1/31/2025',7.82,'RAW'),
+(540,'UM-3 Ec Hall','Copper Scrape','2/8/2025',985.0,'RAW'),
+(541,'Continuus Properzi (Alu.CCR)','Induction Heater 150 KW','2/11/2025',1.0,'RAW'),
+(542,'Continuus Properzi (Alu.CCR)','Electrical panel','2/11/2025',1.0,'RAW'),
+(543,'Continuus Properzi (Alu.CCR)','Insulation detector','2/11/2025',1.0,'RAW'),
+(544,'Continuus Properzi (Alu.CCR)','Pumping unit','2/11/2025',1.0,'RAW'),
+(545,'Continuus Properzi (Alu.CCR)','Control pulpit','2/11/2025',1.0,'RAW'),
+(546,'Continuus Properzi (Alu.CCR)','Flow control valve','2/11/2025',1.0,'RAW'),
+(547,'Continuus Properzi (Alu.CCR)','Relay 24 vdc','2/11/2025',2.0,'RAW'),
+(548,'Continuus Properzi (Alu.CCR)','Ac dc control card','2/11/2025',1.0,'RAW'),
+(549,'Continuus Properzi (Alu.CCR)','Fuse 2A','2/11/2025',1.0,'RAW'),
+(550,'Continuus Properzi (Alu.CCR)','Fuse 6A','2/11/2025',1.0,'RAW'),
+(551,'Continuus Properzi (Alu.CCR)','Fuse 10A','2/11/2025',1.0,'RAW'),
+(552,'Continuus Properzi (Alu.CCR)','Fuse 16A','2/11/2025',1.0,'RAW'),
+(553,'Creative Electronics','Bare copper strip','2/12/2025',3988.1,'RAW'),
+(554,'Pakistan cables karachi','Copper Scrape','2/14/2025',8230.0,'RAW'),
+(555,'UM-3 Ec Hall','Copper Scrape','2/15/2025',410.0,'RAW'),
+(556,'Fine Daily karachi (Processing)','Copper Scrape','2/17/2025',3007.1,'RAW'),
+(557,'Sky power','Ec wire 2.15','2/18/2025',553.34,'RAW'),
+(558,'Pakistan cables karachi','Copper Cathode PIRDOP','2/18/2025',25407.0,'RAW'),
+(559,'Jili Mechanical','Ec wire 0.850','2/19/2025',24.68,'RAW'),
+(560,'International Trading Co','Ammonia Gas','2/19/2025',1100.0,'RAW'),
+(561,'UM-3 Ec Hall','Copper Scrape','2/22/2025',943.0,'RAW'),
+(562,'Pakistan cables karachi','Copper Cathode PIRDOP','2/26/2025',25240.0,'RAW'),
+(563,'UM-1','Copper wire 4mm','2/27/2025',4053.0,'RAW'),
+(564,'UM-3 Ec Hall','Copper Scrape','2/28/2025',1645.0,'RAW'),
+(565,'Fine Daily karachi (Processing)','Copper Scrape','2/28/2025',2997.1,'RAW'),
+(566,'Continuus Properzi (Alu.CCR)','Steel belt 80x2.5mm','2/28/2025',942.0,'RAW'),
+(567,'Continuus Properzi (Alu.CCR)','Spout ','2/28/2025',68.0,'RAW'),
+(568,'Continuus Properzi (Alu.CCR)','Filter fabric','2/28/2025',2.0,'RAW'),
+(569,'Continuus Properzi (Alu.CCR)','Down spout','2/28/2025',85.0,'RAW'),
+(570,'Continuus Properzi (Alu.CCR)','Plug ','2/28/2025',1.0,'RAW'),
+(571,'Continuus Properzi (Alu.CCR)','Ring','2/28/2025',1.0,'RAW'),
+(572,'Continuus Properzi (Alu.CCR)','Spout ','2/28/2025',17.0,'RAW'),
+(573,'Continuus Properzi (Alu.CCR)','Flow Regulator cone','2/28/2025',85.0,'RAW'),
+(574,'Continuus Properzi (Alu.CCR)','Carbolane paper','2/28/2025',3.0,'RAW'),
+(575,'Continuus Properzi (Alu.CCR)','Hex socket screw','2/28/2025',100.0,'RAW'),
+(576,'Continuus Properzi (Alu.CCR)','Shear pin dia -13','2/28/2025',100.0,'RAW'),
+(577,'Continuus Properzi (Alu.CCR)','Thermocouple','2/28/2025',3.0,'RAW'),
+(578,'Continuus Properzi (Alu.CCR)','Proximately Ys','2/28/2025',3.0,'RAW'),
+(579,'Continuus Properzi (Alu.CCR)','Proximately Xs','2/28/2025',3.0,'RAW'),
+(580,'Continuus Properzi (Alu.CCR)','Spout  (For Copper CCR)','2/28/2025',5.0,'RAW'),
+(581,'UM-1','Copper wire 4mm','3/1/2025',4665.0,'RAW'),
+(582,'Pakistan Cables karachi','Copper Scrape','3/3/2025',6559.0,'RAW'),
+(583,'UM-2','Copper Scrape','3/6/2025',587.0,'RAW'),
+(584,'UM-3 Ec Hall','Copper Scrape','3/8/2025',365.0,'RAW'),
+(585,'Karachi via Head offie','PCI Card for tensile PC ','3/10/2025',1.0,'RAW'),
+(586,'Pakistan Cables (Processing)','Copper cathode PRIDOP','3/10/2025',100426.0,'RAW'),
+(587,'UM-1','Copper wire 4mm','3/10/2025',1635.0,'RAW'),
+(588,'Karachi (Glencore)','Copper cathode KCC','3/11/2025',49355.0,'RAW'),
+(589,'UM-3 Ec Hall','Copper Scrape','3/15/2025',685.0,'RAW'),
+(590,'Karachi ','Copper Rod 8mm imp','3/17/2025',24090.0,'RAW'),
+(591,'UM-1','Bare Coppe strip 1.7x6','3/19/2025',1144.2,'RAW'),
+(592,'UM-1','Bare Coppe strip 1.1x5.5','3/19/2025',247.8,'RAW'),
+(593,'UM-3 Ec Hall','Copper Scrape','3/22/2025',1360.0,'RAW'),
+(594,'UM-1','Bare Coppe strip 1.1x5.5','3/21/2025',748.7,'RAW'),
+(595,'UM-1','Bare Coppe strip 1.1x5.5','3/25/2025',1117.6,'RAW'),
+(596,'UM-1','Copper wire 4mm','3/25/2025',1532.9,'RAW'),
+(597,'Karachi (Glencore)','Copper Cathode Zambia','3/26/2025',52057.0,'RAW'),
+(598,'UM-1','Bare Coppe strip 1.1x5.5','3/28/2025',995.0,'RAW'),
+(599,'UM-3 Ec Hall','Copper Scrape','3/29/2025',1175.0,'RAW');
+
+INSERT INTO RAW_MATERIAL
+VALUES
+(507,'COPPER CATHODE/SCRPAE',NULL),
+(508,'ALUMINIUM ',NULL),
+(509,'COPPER CATHODE/SCRPAE',NULL),
+(510,'COPPER CATHODE/SCRPAE',NULL),
+(511,'COPPER CATHODE/SCRPAE',NULL),
+(512,NULL,'Reels'),
+(513,'COPPER CATHODE/SCRPAE',NULL),
+(514,'COPPER CATHODE/SCRPAE',NULL),
+(515,'COPPER CATHODE/SCRPAE',NULL),
+(516,NULL,'Reels'),
+(517,NULL,'Reels'),
+(518,NULL,'Reels'),
+(519,'COPPER CATHODE/SCRPAE',NULL),
+(520,'COPPER CATHODE/SCRPAE',NULL),
+(521,NULL,'Reels'),
+(522,NULL,'Reels'),
+(523,'COPPER CATHODE/SCRPAE',NULL),
+(524,'ALUMINIUM ',NULL),
+(525,'COPPER CATHODE/SCRPAE',NULL),
+(526,'COPPER CATHODE/SCRPAE',NULL),
+(527,'ALUMINIUM ',NULL),
+(528,'ALUMINIUM ',NULL),
+(529,'COPPER CATHODE/SCRPAE',NULL),
+(530,'COPPER CATHODE/SCRPAE',NULL),
+(531,'COPPER CATHODE/SCRPAE',NULL),
+(532,'COPPER CATHODE/SCRPAE',NULL),
+(533,'COPPER CATHODE/SCRPAE',NULL),
+(534,'COPPER CATHODE/SCRPAE',NULL),
+(535,'COPPER CATHODE/SCRPAE',NULL),
+(536,'COPPER CATHODE/SCRPAE',NULL),
+(537,'COPPER CATHODE/SCRPAE',NULL),
+(538,'COPPER CATHODE/SCRPAE',NULL),
+(539,'COPPER CATHODE/SCRPAE',NULL),
+(540,'COPPER CATHODE/SCRPAE',NULL),
+(541,NULL,'No'),
+(542,NULL,'No'),
+(543,NULL,'No'),
+(544,NULL,'No'),
+(545,NULL,'No'),
+(546,NULL,'No'),
+(547,NULL,'No'),
+(548,NULL,'No'),
+(549,NULL,'No'),
+(550,NULL,'No'),
+(551,NULL,'No'),
+(552,NULL,'No'),
+(553,'COPPER CATHODE/SCRPAE',NULL),
+(554,'COPPER CATHODE/SCRPAE',NULL),
+(555,'COPPER CATHODE/SCRPAE',NULL),
+(556,'COPPER CATHODE/SCRPAE',NULL),
+(557,'COPPER CATHODE/SCRPAE',NULL),
+(558,'COPPER CATHODE/SCRPAE',NULL),
+(559,'COPPER CATHODE/SCRPAE',NULL),
+(560,NULL,'Kgs'),
+(561,'COPPER CATHODE/SCRPAE',NULL),
+(562,'COPPER CATHODE/SCRPAE',NULL),
+(563,'COPPER CATHODE/SCRPAE',NULL),
+(564,'COPPER CATHODE/SCRPAE',NULL),
+(565,'COPPER CATHODE/SCRPAE',NULL),
+(566,NULL,'Kgs'),
+(567,NULL,'No'),
+(568,NULL,'Roll'),
+(569,NULL,'No'),
+(570,NULL,'No'),
+(571,NULL,'No'),
+(572,NULL,'No'),
+(573,NULL,'No'),
+(574,NULL,'Roll'),
+(575,NULL,'No'),
+(576,NULL,'No'),
+(577,NULL,'No'),
+(578,NULL,'No'),
+(579,NULL,'No'),
+(580,NULL,'No'),
+(581,'COPPER CATHODE/SCRPAE',NULL),
+(582,'COPPER CATHODE/SCRPAE',NULL),
+(583,'COPPER CATHODE/SCRPAE',NULL),
+(584,'COPPER CATHODE/SCRPAE',NULL),
+(585,NULL,'No'),
+(586,'COPPER CATHODE/SCRPAE',NULL),
+(587,'COPPER CATHODE/SCRPAE',NULL),
+(588,'COPPER CATHODE/SCRPAE',NULL),
+(589,'COPPER CATHODE/SCRPAE',NULL),
+(590,'COPPER CATHODE/SCRPAE',NULL),
+(591,'COPPER CATHODE/SCRPAE',NULL),
+(592,'COPPER CATHODE/SCRPAE',NULL),
+(593,'COPPER CATHODE/SCRPAE',NULL),
+(594,'COPPER CATHODE/SCRPAE',NULL),
+(595,'COPPER CATHODE/SCRPAE',NULL),
+(596,'COPPER CATHODE/SCRPAE',NULL),
+(597,'COPPER CATHODE/SCRPAE',NULL),
+(598,'COPPER CATHODE/SCRPAE',NULL),
+(599,'COPPER CATHODE/SCRPAE',NULL);
+
+
+INSERT INTO MATERIAL
+VALUES
+(50973, 'UM-3', '8mmUpcast', '1/2/2025', 3144, 'FINISHED'),
+(50974, 'UM-3', '8mmUpcast', '1/6/2025', 6465, 'FINISHED'),
+(50975, 'UM-3', '8mmUpcast', '1/8/2025', 3152, 'FINISHED'),
+(50976, 'UM-3', '8mmUpcast', '1/10/2025', 11025, 'FINISHED'),
+(50977, 'Transfopower', '12.5mmUpcast', '1/13/2025', 10000, 'FINISHED'),
+(50978, 'UM-3', '8mmUpcast', '1/13/2025', 7883, 'FINISHED'),
+(50979, 'UM-3', '12.5mmUpcast', '1/13/2025', 1643, 'FINISHED'),
+(50980, 'PEL', '8mm IMP', '1/15/2025', 3000, 'FINISHED'),
+(50981, 'UM-3', '8mmUpcast', '1/16/2025', 5678, 'FINISHED'),
+(50982, 'UM-3', '8mmUpcast', '1/18/2025', 6980, 'FINISHED'),
+(50983, 'UM-3', '8mmUpcast', '1/21/2025', 7666, 'FINISHED'),
+(50984, 'UM-3', '10mmUpcast', '1/23/2025', 1577, 'FINISHED'),
+(50985, 'UM-3', '8mmUpcast', '1/23/2025', 7511, 'FINISHED'),
+(50986, 'Indus Cable Karachi', '8mmUpcast', '1/24/2025', 10094, 'FINISHED'),
+(50987, 'Pakistan Csbles', '8mmUpcast', '1/25/2025', 12329, 'FINISHED'),
+(50988, 'Pakistan Csbles', '8mmUpcast', '1/25/2025', 11458, 'FINISHED'),
+(50989, 'UM-3', '8mmUpcast', '1/25/2025', 7439, 'FINISHED'),
+(50990, 'Pakistan Csbles', '8mmUpcast', '1/27/2025', 13058, 'FINISHED'),
+(50991, 'Pakistan Csbles', '8mmUpcast', '1/27/2025', 13155, 'FINISHED'),
+(50992, 'UM-3', '8mmUpcast', '1/27/2025', 126, 'FINISHED'),
+(50993, 'UM-3', '8mmUpcast', '1/30/2025', 5990, 'FINISHED'),
+(50994, 'UM-3', '12.5mmUpcast', '2/1/2025', 2223, 'FINISHED'),
+(50995, 'PEL', '8mmIMP', '2/4/2025', 5000, 'FINISHED'),
+(50996, 'PEL', '8mmIMP', '2/4/2025', 3010, 'FINISHED'),
+(50997, 'SKY POWER', '12.5mmUpcast', '2/4/2025', 1224, 'FINISHED'),
+(50998, 'SKY POWER', '12.5mmUpcast', '2/4/2025', 621, 'FINISHED'),
+(50999, 'UM-3', '8mmUpcast', '2/8/2025', 3423, 'FINISHED'),
+(51000, 'UM-3', '8mmUpcast', '2/10/2025', 744, 'FINISHED'),
+(51001, 'UM-3', '8mmUpcast', '2/13/2025', 3403, 'FINISHED'),
+(51002, 'UM-3', '8mmUpcast', '2/18/2025', 6620, 'FINISHED'),
+(51003, 'Pakistan cables', '8mm imp', '2/19/2025', 12777, 'FINISHED'),
+(51004, 'Pakistan cables', '8mm imp', '2/20/2025', 12938, 'FINISHED'),
+(51005, 'Pakistan cables', '8mm imp', '2/20/2025', 13007, 'FINISHED'),
+(51006, 'Pakistan cables', '8mm imp', '2/21/2025', 12789, 'FINISHED'),
+(51007, 'Pakistan cables (Proces)', '8mmUpcast', '2/21/2025', 11194, 'FINISHED'),
+(51008, 'Pakistan Cables(Proces)', '8mmUpcast', '2/24/2025', 11474, 'FINISHED'),
+(51009, 'UM-3', '8mmUpcast', '2/25/2025', 8005, 'FINISHED'),
+(51010, 'Pakistan Cables(Proces)', '8mmUpcast', '2/28/2025', 11617, 'FINISHED'),
+(51011, 'Indus Cable Karachi', '8mmUpcast', '3/4/2025', 6913, 'FINISHED'),
+(51012, 'Pakistan cables (Processing)', '8mmUpcast', '3/4/2025', 14535, 'FINISHED'),
+(51013, 'UM-3', '8mmUpcast', '3/4/2025', 2203, 'FINISHED'),
+(51014, 'UM-3', '8mmUpcast', '3/7/2025', 6489, 'FINISHED'),
+(51015, 'Pakistan cables (Processing)', '8mmUpcast', '3/10/2025', 9241, 'FINISHED'),
+(51016, 'UM-3', '8mmUpcast', '3/10/2025', 3079, 'FINISHED'),
+(51017, 'Pakistan cables (Processing)', '8mmUpcast', '3/12/2025', 13666, 'FINISHED'),
+(51018, 'UM-3', '8mmUpcast', '3/13/2025', 2731, 'FINISHED'),
+(51019, 'UM-3', '10mmUpcast', '3/13/2025', 2624, 'FINISHED'),
+(51020, 'Pakistan cables (Processing)', '8mmUpcast', '3/14/2025', 11542, 'FINISHED'),
+(51021, 'Pakistan cables (Processing Cathode Return PIRDIP 24731 KGS )', 'Cathode
+24731 KGS', '3/15/2025', 0, 'FINISHED'),
+(51022, 'UM-3', '8mmUpcast', '3/15/2025', 1786, 'FINISHED'),
+(51023, 'Pakistan cables (Processing)', '8mmUpcast', '3/17/2025', 14821, 'FINISHED'),
+(51024, 'UM-3', '8mmUpcast', '3/18/2025', 3000, 'FINISHED'),
+(51025, 'UM-3', '10mmUpcast', '3/19/2025', 7790, 'FINISHED'),
+(51026, 'UM-3', '8mmUpcast', '3/19/2025', 1573, 'FINISHED'),
+(51027, 'Pakistan cables (Processing)', '8mmUpcast', '3/20/2025', 12905, 'FINISHED'),
+(51028, 'UM-3', '8mmUpcast', '3/21/2025', 3020, 'FINISHED'),
+(51029, 'UM-3', '8mmUpcast', '3/24/2025', 5922, 'FINISHED'),
+(51030, 'Pakistan cables (Processing)', '8mmUpcast', '3/24/2025', 13520, 'FINISHED'),
+(51031, 'UM-3', '8mmUpcast', '3/26/2025', 7934, 'FINISHED'),
+(51032, 'UM-3', '10mmUpcast', '3/26/2025', 2250, 'FINISHED'),
+(470, 'Upcast', '8mmUpcast', '1/1/2025', 12639, 'FINISHED'),
+(471, 'Upcast', '8mmUpcast', '1/2/2025', 3144, 'FINISHED'),
+(472, 'Upcast', '8mmUpcast', '1/4/2025', 9617, 'FINISHED'),
+(473, 'Upcast', '12.5mmUpcast', '1/4/2025', 5588, 'FINISHED'),
+(474, 'Upcast', '8mmUpcast', '1/7/2025', 10365, 'FINISHED'),
+(475, 'Upcast', '12.5mmUpcast', '1/7/2025', 6055, 'FINISHED'),
+(476, 'Upcast', '8mmUpcast', '1/9/2025', 16569, 'FINISHED'),
+(477, 'Upcast', '8mmUpcast', '1/13/2025', 23585, 'FINISHED'),
+(478, 'Upcast', '8mmUpcast', '1/16/2025', 20691, 'FINISHED'),
+(479, 'Upcast', '8mmUpcast', '1/20/2025', 22549, 'FINISHED'),
+(480, 'Upcast', '8mmUpcast', '1/22/2025', 16755, 'FINISHED'),
+(481, 'Upcast', '10mmUpcast', '1/22/2025', 1577, 'FINISHED'),
+(482, 'Upcast', '8mmUpcast', '1/25/2025', 11984, 'FINISHED'),
+(483, 'Upcast', '8mmUpcast', '1/29/2025', 19491, 'FINISHED'),
+(484, 'Upcast', '10mmUpcast', '1/31/2025', 757, 'FINISHED'),
+(485, 'UPCAST LOT-123', '8mmUpcast', '2/1/2025', 6125, 'FINISHED'),
+(486, 'UPCAST LOT-123', '10.5mmUpcast', '2/1/2025', 679, 'FINISHED'),
+(487, 'UPCAST LOT-123', '12.5mmUpcast', '2/1/2025', 4068, 'FINISHED'),
+(488, 'UPCAST LOT-124', '8mmUpcast', '2/11/2025', 6065, 'FINISHED'),
+(489, 'UPCAST LOT-125', '10mmUpcast', '2/18/2025', 2624, 'FINISHED'),
+(490, 'UPCAST LOT-126', '8mmUpcast', '2/21/2025', 16454, 'FINISHED'),
+(491, 'UPCAST LOT-127', '8mmUpcast', '2/24/2025', 10243, 'FINISHED'),
+(492, 'UPCAST LOT-128', '8mmUpcast', '3/1/2025', 7588, 'FINISHED'),
+(493, 'UPCAST LOT-129', '8mmUpcast', '3/3/2025', 21448, 'FINISHED'),
+(494, 'UPCAST LOT-130', '8mmUpcast', '3/7/2025', 9241, 'FINISHED'),
+(495, 'UPCAST LOT-131', '10mmUpcast', '3/9/2025', 2250, 'FINISHED'),
+(496, 'UPCAST LOT-132', '8mmUpcast', '3/12/2025', 16397, 'FINISHED'),
+(497, 'UPCAST LOT-133', '8mmUpcast', '3/14/2025', 11542, 'FINISHED'),
+(498, 'UPCAST LOT-134', '8mmUpcast', '3/15/2025', 1786, 'FINISHED'),
+(499, 'Karachi imp Rod', '8mm imp', '3/17/2025', 24090, 'FINISHED'),
+(500, 'UPCAST LOT-135', '8mmUpcast', '3/17/2025', 14821, 'FINISHED'),
+(501, 'UPCAST LOT-136', '8mmUpcast', '3/18/2025', 3000, 'FINISHED'),
+(502, 'UPCAST LOT-137', '8mmUpcast', '3/20/2025', 14478, 'FINISHED'),
+(503, 'UPCAST LOT-138', '8mmUpcast', '3/21/2025', 3020, 'FINISHED'),
+(504, 'UPCAST LOT-139', '8mmUpcast', '3/24/2025', 19442, 'FINISHED'),
+(505, 'UPCAST LOT-140', '8mmUpcast', '3/26/2025', 12092, 'FINISHED'),
+(506, 'UPCAST LOT-141', '8mmUpcast', '3/28/2025', 7802, 'FINISHED');
+
+INSERT INTO FINISHED_MATERIAL
+VALUES
+(50973, 'Outward'),
+(50974, 'Outward'),
+(50975, 'Outward'),
+(50976, 'Outward'),
+(50977, 'Outward'),
+(50978, 'Outward'),
+(50979, 'Outward'),
+(50980, 'Outward'),
+(50981, 'Outward'),
+(50982, 'Outward'),
+(50983, 'Outward'),
+(50984, 'Outward'),
+(50985, 'Outward'),
+(50986, 'Outward'),
+(50987, 'Outward'),
+(50988, 'Outward'),
+(50989, 'Outward'),
+(50990, 'Outward'),
+(50991, 'Outward'),
+(50992, 'Outward'),
+(50993, 'Outward'),
+(50994, 'Outward'),
+(50995, 'Outward'),
+(50996, 'Outward'),
+(50997, 'Outward'),
+(50998, 'Outward'),
+(50999, 'Outward'),
+(51000, 'Outward'),
+(51001, 'Outward'),
+(51002, 'Outward'),
+(51003, 'Outward'),
+(51004, 'Outward'),
+(51005, 'Outward'),
+(51006, 'Outward'),
+(51007, 'Outward'),
+(51008, 'Outward'),
+(51009, 'Outward'),
+(51010, 'Outward'),
+(51011, 'Outward'),
+(51012, 'Outward'),
+(51013, 'Outward'),
+(51014, 'Outward'),
+(51015, 'Outward'),
+(51016, 'Outward'),
+(51017, 'Outward'),
+(51018, 'Outward'),
+(51019, 'Outward'),
+(51020, 'Outward'),
+(51021, 'Outward'),
+(51022, 'Outward'),
+(51023, 'Outward'),
+(51024, 'Outward'),
+(51025, 'Outward'),
+(51026, 'Outward'),
+(51027, 'Outward'),
+(51028, 'Outward'),
+(51029, 'Outward'),
+(51030, 'Outward'),
+(51031, 'Outward'),
+(51032, 'Outward'),
+(470, 'Inward'),
+(471, 'Inward'),
+(472, 'Inward'),
+(473, 'Inward'),
+(474, 'Inward'),
+(475, 'Inward'),
+(476, 'Inward'),
+(477, 'Inward'),
+(478, 'Inward'),
+(479, 'Inward'),
+(480, 'Inward'),
+(481, 'Inward'),
+(482, 'Inward'),
+(483, 'Inward'),
+(484, 'Inward'),
+(485, 'Inward'),
+(486, 'Inward'),
+(487, 'Inward'),
+(488, 'Inward'),
+(489, 'Inward'),
+(490, 'Inward'),
+(491, 'Inward'),
+(492, 'Inward'),
+(493, 'Inward'),
+(494, 'Inward'),
+(495, 'Inward'),
+(496, 'Inward'),
+(497, 'Inward'),
+(498, 'Inward'),
+(499, 'Inward'),
+(500, 'Inward'),
+(501, 'Inward'),
+(502, 'Inward'),
+(503, 'Inward'),
+(504, 'Inward'),
+(505, 'Inward'),
+(506, 'Inward');
+
+
+SELECT M.MATERIAL_NO, M.PARTY_NAME, M.DESCRIPT, M.DATE_,R.MATERIAL_TYPE,R.UNIT,M.QUANTITY
+FROM MATERIAL M
+JOIN RAW_MATERIAL R ON M.MATERIAL_NO = R.MATERIAL_NO;
+
+
+
+-- FACTORY TABLE
+CREATE TABLE FACTORY(
+    FACTORY_ID INT PRIMARY KEY,
+    FACTORY_NAME VARCHAR(100)
+);
+
+-- PARTY TABLE
+CREATE TABLE PARTY(
+    PARTY_ID INT PRIMARY KEY,
+    PARTY_NAME VARCHAR(100)
+)
+
+-- MAINTENANCE TABLE
+CREATE TABLE MAINTENANCE (
+    MAINTENANCE_NO INT PRIMARY KEY,
+    PARTY_NAME VARCHAR(100) NOT NULL,
+    MAINTENANCE_DESCRIPTION VARCHAR(255),
+    MAINTENANCE_DATE DATE NOT NULL,
+    QUANTITY DECIMAL(10,2),
+    UNIT VARCHAR(20),
+    MAINTENANCE_TYPE VARCHAR(50) NOT NULL,
+    FACTORY_ID INT FOREIGN KEY REFERENCES FACTORY(FACTORY_ID),
+    PARTY_ID INT FOREIGN KEY REFERENCES PARTY(PARTY_ID)
+);
+
+-- FACTORY_PRODUCTION TABLE (PARENT TABLE - COMPLETE, DISJOINT)
+CREATE TABLE FACTORY_PRODUCTION (
+    SR_NO INT PRIMARY KEY,
+    SIZE_MM DECIMAL(10,2),
+    PRODUCT_WEIGHT DECIMAL(10,2),
+    PRODUCT_TYPE VARCHAR(50) NOT NULL,
+    FACTORY_ID INT,
+    FOREIGN KEY (FACTORY_ID) REFERENCES FACTORY(FACTORY_ID)
+);
+
+-- SUBTYPES
+---------------
+
+CREATE TABLE ENAMEL_COPPER_WIRE (
+    SR_NO INT PRIMARY KEY,
+    SIZE_SWG VARCHAR(20),
+    REELS INT,
+    REMARKS VARCHAR(255),
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+CREATE TABLE WRAPPED_SECTION (
+    SR_NO INT PRIMARY KEY,
+    REELS INT,
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+
+CREATE TABLE BARE_STRIP (
+    SR_NO INT PRIMARY KEY,
+    REELS INT,
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+CREATE TABLE BARE_WIRE (
+    SR_NO INT PRIMARY KEY,
+    REELS INT,
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+CREATE TABLE SUBMERSIBLE_COPPER_WIRE (
+    SR_NO INT PRIMARY KEY,
+    NO_OF_COILS INT,
+    REMARKS VARCHAR(255),
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+CREATE TABLE COPPER_TAPE (
+    SR_NO INT PRIMARY KEY,
+    NO_OF_COILS INT,
+    REMARKS VARCHAR(255),
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+CREATE TABLE ALUMINIUM_ENAMEL_WIRE (
+    SR_NO INT PRIMARY KEY,
+    SIZE_SWG VARCHAR(20),
+    REELS INT,
+    REMARKS VARCHAR(255),
+    FOREIGN KEY (SR_NO) REFERENCES FACTORY_PRODUCTION(SR_NO)
+);
+
+-- INSERT VALUES INTO FACTORY TABLE
+INSERT INTO FACTORY (FACTORY_ID, FACTORY_NAME) VALUES
+(1, 'UNIVERSAL METALS')
+
+UPDATE EMPLOYEE 
+SET FACTORY_ID = 1;
+
+
+-- INSERT MAINTENANCE INWARD DATA FOR MARCH 2025
+INSERT INTO MAINTENANCE (MAINTENANCE_NO, PARTY_NAME, MAINTENANCE_DESCRIPTION, MAINTENANCE_DATE, QUANTITY, UNIT, MAINTENANCE_TYPE, FACTORY_ID) VALUES
+(4, 'Lahore shop', 'Magnetic contactor', '2025-03-03', 1, 'No', 'Inward', 1),
+(5, 'Lahore shop', 'Overload Relay', '2025-03-03', 1, 'No', 'Inward', 1),
+(6, 'Lahore shop', 'Overload Relay 12v', '2025-03-03', 2, 'No', 'Inward', 1),
+(7, 'Lahore shop', 'Rubber O Ring 22mm', '2025-03-03', 25, 'No', 'Inward', 1),
+(8, 'Lahore shop', 'Rubber O Ring 19mm', '2025-03-03', 25, 'No', 'Inward', 1),
+(9, 'UM-1', 'Motor 5.5 Kw (Rewinded)', '2025-03-03', 1, 'No', 'Inward', 1),
+(10, 'Haji Riaz Gujranwala', 'Empty Plastic Reels 20 kgs', '2025-03-04', 1600, 'Reels', 'Inward', 1),
+(11, 'Haji Riaz Gujranwala', 'Empty Plastic Reels 10 kgs', '2025-03-04', 1000, 'Reels', 'Inward', 1),
+(12, 'PEL via UM1', 'Empty Iron Reels Hv', '2025-03-05', 6, 'Reels', 'Inward', 1),
+(13, 'Lahore shop via JF-1', 'Cpper Busbar 10x50', '2025-03-05', 12, 'Rft', 'Inward', 1),
+(14, 'Lahore shop via JF-1', 'Cpper Busbar 5x25', '2025-03-05', 50, 'Rft', 'Inward', 1),
+(15, 'Lahore shop via JF-1', '3 Pole breaker 1200 A', '2025-03-06', 1, 'No', 'Inward', 1),
+(16, 'Lahore shop via JF-1', '3 Pole breaker 250 A', '2025-03-06', 5, 'No', 'Inward', 1),
+(17, 'Universal Plot-33', 'Hilty Drill', '2025-03-06', 1, 'No', 'Inward', 1),
+(18, 'Lahore shop via JF-2', 'C Chanel', '2025-03-07', 2, 'No', 'Inward', 1),
+(19, 'Lahore shop via JF-1', 'Ms nut bolt', '2025-03-07', 50, 'No', 'Inward', 1),
+(20, 'Lahore shop via JF-1', 'Elkey bolt', '2025-03-07', 20, 'No', 'Inward', 1),
+(21, 'Lahore shop via JF-1', 'Raychem sleave', '2025-03-07', 28, 'Rft', 'Inward', 1),
+(22, 'Lahore shop via JF-1', 'CT -1000', '2025-03-07', 3, 'No', 'Inward', 1),
+(23, 'Lahore shop via JF-1', 'Cable gland', '2025-03-07', 23, 'No', 'Inward', 1),
+(24, 'Lahore shop via JF-1', 'Ms nut bolt', '2025-03-07', 20, 'No', 'Inward', 1),
+(25, 'Digital Electronics', 'Power module 4 kw', '2025-03-08', 1, 'No', 'Inward', 1),
+(26, 'Jameel woods', 'Wooden Planks', '2025-03-08', 58, 'No', 'Inward', 1),
+(27, 'Multicore cables', 'Empty Iron Reels', '2025-03-08', 10, 'No', 'Inward', 1),
+(28, 'Multicore cables', 'Empty Iron Reels', '2025-03-10', 3, 'No', 'Inward', 1),
+(29, 'Universal Plot-33', 'DG Cement', '2025-03-12', 5, 'Bags', 'Inward', 1),
+(30, 'Lahore via UM1', 'Die 2.45x7', '2025-03-13', 1, 'No', 'Inward', 1),
+(31, 'Lahore via UM1', 'Die 5.1x15.1', '2025-03-13', 1, 'No', 'Inward', 1),
+(32, 'Lahore shop', 'Fire prof clay', '2025-03-14', 1, 'Bags', 'Inward', 1),
+(33, 'Lahore shop', 'Glass water', '2025-03-14', 20, 'Ltr', 'Inward', 1),
+(34, 'Lahore shop', 'Taflon Rod', '2025-03-14', 1, 'No', 'Inward', 1),
+(35, 'Lahore shop', 'Bearing with bracket', '2025-03-14', 4, 'No', 'Inward', 1),
+(36, 'Lahore shop', 'Tip san', '2025-03-14', 2, 'No', 'Inward', 1),
+(37, 'Lahore shop', 'Cutting disk 9"', '2025-03-14', 1, 'Box', 'Inward', 1),
+(38, 'Lahore shop', 'Cutting disk 14"', '2025-03-14', 12, 'No', 'Inward', 1),
+(39, 'Lahore shop', 'Cutting disk 4"', '2025-03-14', 1, 'box', 'Inward', 1),
+(40, 'Lahore shop', 'Cotton glowes', '2025-03-14', 10, 'Pkt', 'Inward', 1),
+(41, 'Lahore shop', 'Cotton waste', '2025-03-14', 1, 'Bags', 'Inward', 1),
+(42, 'Lahore via UM1', 'Die 2.45x7 (Repaired)', '2025-03-15', 1, 'No', 'Inward', 1),
+(43, 'Lahore via UM1', 'Die 5.1x15.1 (Repaired)', '2025-03-15', 1, 'No', 'Inward', 1),
+(44, 'Lahore shop via saleem CCTV', 'Hard disk sata 10 TB', '2025-03-17', 1, 'No', 'Inward', 1),
+(45, 'Lahore shop', 'Temprature meter', '2025-03-19', 6, 'No', 'Inward', 1),
+(46, 'Lahore shop', 'Belt', '2025-03-19', 1, 'No', 'Inward', 1),
+(47, 'Lahore shop', 'Aluminium Pully', '2025-03-19', 6, 'No', 'Inward', 1),
+(48, 'Lahore shop', 'Temprature sensor pt100', '2025-03-19', 2, 'No', 'Inward', 1),
+(49, 'Lahore shop', 'Rubber oil seal', '2025-03-20', 6, 'No', 'Inward', 1),
+(50, 'Lahore shop', 'Bearing 6208', '2025-03-20', 3, 'No', 'Inward', 1),
+(51, 'Lahore shop', 'Taflon Rod (Replacement)', '2025-03-20', 1, 'No', 'Inward', 1),
+(52, 'Hydroapex', 'Ro Plant 2 ton capacity new for cold store', '2025-03-20', 1, 'set', 'Inward', 1),
+(53, 'Multicore cables', 'Empty iron Reels', '2025-03-20', 13, 'Reels', 'Inward', 1),
+(54, 'Multicore cables', 'Empty iron Reels', '2025-03-21', 3, 'Reels', 'Inward', 1),
+(55, 'Lahore shop', 'Gatta', '2025-03-21', 100, 'Kgs', 'Inward', 1),
+(56, 'Lahore shop', 'Glue', '2025-03-21', 5, 'Kgs', 'Inward', 1),
+(57, 'Lahore shop', 'Plastic dori', '2025-03-21', 24, 'No', 'Inward', 1),
+(58, 'Lahore shop', 'Yellow tape 2"', '2025-03-21', 1, 'Box', 'Inward', 1),
+(59, 'Lahore shop', 'Cloth tape 2"', '2025-03-21', 1, 'Box', 'Inward', 1),
+(60, 'Lahore shop', 'Masking tape', '2025-03-21', 24, 'No', 'Inward', 1),
+(61, 'Lahore shop', 'knif blade', '2025-03-21', 1, 'Box', 'Inward', 1),
+(62, 'Lahore shop', 'samad bond', '2025-03-21', 5, 'Kgs', 'Inward', 1),
+(63, 'Lahore shop', 'LED panel light', '2025-03-21', 1, 'No', 'Inward', 1),
+(64, 'Lahore shop', 'Air pipe', '2025-03-21', 10, 'MTR', 'Inward', 1),
+(65, 'Lahore shop', 'Heat gun', '2025-03-21', 1, 'No', 'Inward', 1),
+(66, 'Head office', 'Dead dies (TLJ-250 Chamb-I', '2025-03-21', 12, 'No', 'Inward', 1),
+(67, 'Head office', 'Dead dies (TLJ-250 Chamb-II', '2025-03-21', 7, 'No', 'Inward', 1),
+(68, 'Lahore wood tall', 'Empty wooden pallet for coil', '2025-03-21', 31, 'No', 'Inward', 1),
+(69, 'Lahore shop', 'Bearing 6009', '2025-03-22', 1, 'No', 'Inward', 1),
+(70, 'Lahore shop', 'Bearing 6010', '2025-03-22', 1, 'No', 'Inward', 1),
+(71, 'Lahore shop', 'Elkey bolt', '2025-03-22', 24, 'No', 'Inward', 1),
+(72, 'Lahore shop', 'Emmery paper', '2025-03-22', 5, 'MTR', 'Inward', 1),
+(73, 'Lahore shop', 'Plastic Polythene Roll', '2025-03-22', 5, 'Roll', 'Inward', 1),
+(74, 'PEL', 'Empty Iron Reels Hv', '2025-03-24', 6, 'Reels', 'Inward', 1),
+(75, 'PEL', 'Empty Iron Reels Tawa', '2025-03-24', 3, 'Reels', 'Inward', 1),
+(76, 'UM-1', 'Die 1.4x16', '2025-03-25', 1, 'No', 'Inward', 1),
+(77, 'Lahore shop Saleem CCTV', 'Poe swtich 8 port', '2025-03-25', 2, 'No', 'Inward', 1),
+(78, 'Lahore shop Saleem CCTV', 'Poe swtich 4port', '2025-03-25', 3, 'No', 'Inward', 1),
+(79, 'Lahore shop Saleem CCTV', 'Gigabit', '2025-03-25', 8, 'No', 'Inward', 1),
+(80, 'Lahore shop Saleem CCTV', 'Pvc connector', '2025-03-25', 100, 'No', 'Inward', 1),
+(81, 'Lahore shop Saleem CCTV', 'Eathernet cable cat-6', '2025-03-25', 150, 'MTR', 'Inward', 1),
+(82, 'Lahore shop Saleem CCTV', 'IP Camera (Repaired)', '2025-03-25', 6, 'No', 'Inward', 1),
+(83, 'Universal Plot-33', 'DG Cement', '2025-03-27', 2, 'Bags', 'Inward', 1),
+(84, 'Primax Water Tank', 'Water Tank', '2025-03-27', 1, 'No', 'Inward', 1),
+(85, 'Universal Plot-33', 'Grander 4"', '2025-03-29', 1, 'No', 'Inward', 1);
+
+-- INSERT MAINTENANCE OUTWARD DATA FOR MARCH 2025
+INSERT INTO MAINTENANCE (MAINTENANCE_NO, PARTY_NAME, MAINTENANCE_DESCRIPTION, MAINTENANCE_DATE, QUANTITY, UNIT, MAINTENANCE_TYPE, FACTORY_ID) VALUES
+(86, 'UM-1', 'Motor for Rewinding', '2025-03-01', 1, 'No', 'Outward', 1),
+(87, 'UM-1', 'Motor 45 kw for Rewinding', '2025-03-01', 1, 'No', 'Outward', 1),
+(88, 'Universal Plot-33', 'Hilty drill', '2025-03-04', 1, 'No', 'Outward', 1),
+(89, 'Digital Electronics', 'Siemense drive 4 kw', '2025-03-04', 1, 'No', 'Outward', 1),
+(90, 'Digital Electronics', 'Siemense control card', '2025-03-07', 1, 'No', 'Outward', 1),
+(91, 'Lahore shop via UM1', 'Dead dies for 5.1x15.1, 2.45x7', '2025-03-11', 2, 'No', 'Outward', 1),
+(92, 'UM-1', 'Empty Boxes sona 9x9x11', '2025-03-12', 60, 'Boxes', 'Outward', 1),
+(93, 'Lahore shop via UM1', 'Dies for Repairing 5.1x15.1,2.45x7', '2025-03-13', 2, 'No', 'Outward', 1),
+(94, 'Universal Plot-33', 'Spanner/Goti set', '2025-03-15', 1, 'Set', 'Outward', 1),
+(95, 'Digital Electronics', 'Inovance Drive 3.7 kw for Reparing', '2025-03-15', 1, 'No', 'Outward', 1),
+(96, 'Lahore shop via UM1', 'Die for Repairing 5.1x15.1', '2025-03-15', 1, 'No', 'Outward', 1),
+(97, 'Lahore Electronics Saleem', 'CCTV cameras for Repairing', '2025-03-17', 6, 'No', 'Outward', 1),
+(98, 'Universal Plot-33', 'Small water pump for drain', '2025-03-18', 1, 'No', 'Outward', 1),
+(99, 'UM-1', 'Thyrister 1200 A', '2025-03-18', 6, 'No', 'Outward', 1),
+(100, 'Lahore shop', 'Taflon Rod for Replacement', '2025-03-18', 1, 'No', 'Outward', 1),
+(101, 'Universal Plot-33', 'Grander 4"', '2025-03-19', 1, 'No', 'Outward', 1),
+(102, 'Universal Plot-33', 'Gi pipe 1"', '2025-03-19', 2, 'No', 'Outward', 1),
+(103, 'Universal Plot-33', 'Measring scale 1''', '2025-03-19', 1, 'No', 'Outward', 1),
+(104, 'UM-1', 'Drawing machine pump 1 kw for Rewinding', '2025-03-19', 1, 'No', 'Outward', 1),
+(105, 'UM-1', 'Water cooler pump 0.75 kw for Rewinding', '2025-03-19', 1, 'No', 'Outward', 1),
+(106, 'UM-1', 'Steem generator heater 6 kw for Rewinding', '2025-03-19', 2, 'No', 'Outward', 1),
+(107, 'Universal Plot-33', 'Electric lift (Returnable)', '2025-03-20', 1, 'No', 'Outward', 1),
+(108, 'Lahore shop', 'Drawing pully H50 for Repairng', '2025-03-21', 5, 'No', 'Outward', 1),
+(109, 'UM-1', 'Pvc heater', '2025-03-26', 1, 'No', 'Outward', 1),
+(110, 'UM-1', 'Die for Repairing 1.42x16.05', '2025-03-26', 1, 'No', 'Outward', 1),
+(111, 'Universal Plot-33', 'Concrete cutting disk 9"', '2025-03-27', 1, 'No', 'Outward', 1),
+(112, 'Universal Plot-33', 'Pvc Cable 2.5mm 4 core', '2025-03-28', 10, 'MTR', 'Outward', 1),
+(113, 'Universal Plot-33', '3 pole breaker 32 A', '2025-03-28', 1, 'No', 'Outward', 1);
+
+-- INSERT FACTORY PRODUCTION DATA
+INSERT INTO FACTORY_PRODUCTION (SR_NO, SIZE_MM, PRODUCT_WEIGHT, PRODUCT_TYPE, FACTORY_ID) VALUES
+(1, 0.46, 28, 'ENAMEL_COPPER_WIRE', 1),
+(2, 0.6, 2000, 'ENAMEL_COPPER_WIRE', 1),
+(3, 0.63, 24, 'ENAMEL_COPPER_WIRE', 1),
+(4, 0.65, 20, 'ENAMEL_COPPER_WIRE', 1),
+(5, 0.71, NULL, 'ENAMEL_COPPER_WIRE', 1),
+(6, 0.71, 1740, 'ENAMEL_COPPER_WIRE', 1),
+(7, 0.75, 560, 'ENAMEL_COPPER_WIRE', 1),
+(8, 0.77, 3060, 'ENAMEL_COPPER_WIRE', 1),
+(9, 0.8, 500, 'ENAMEL_COPPER_WIRE', 1),
+(10, 0.81, 2620, 'ENAMEL_COPPER_WIRE', 1),
+(11, 0.81, 1455.12, 'ENAMEL_COPPER_WIRE', 1),
+(12, 0.85, 500, 'ENAMEL_COPPER_WIRE', 1),
+(13, 0.85, 500, 'ENAMEL_COPPER_WIRE', 1),
+(14, 0.85, 3080, 'ENAMEL_COPPER_WIRE', 1),
+(15, 0.85, 60, 'ENAMEL_COPPER_WIRE', 1),
+(16, 0.85, 550, 'ENAMEL_COPPER_WIRE', 1),
+(17, 0.892, 500, 'ENAMEL_COPPER_WIRE', 1),
+(18, 0.9, 509.1, 'ENAMEL_COPPER_WIRE', 1),
+(19, 0.9, 371.5, 'ENAMEL_COPPER_WIRE', 1),
+(20, 0.914, 1873, 'ENAMEL_COPPER_WIRE', 1),
+(21, 1.05, 45, 'ENAMEL_COPPER_WIRE', 1),
+(22, 1.016, 910, 'ENAMEL_COPPER_WIRE', 1),
+(23, 1.1, 150, 'ENAMEL_COPPER_WIRE', 1),
+(24, 1.15, 551, 'ENAMEL_COPPER_WIRE', 1),
+(25, 1.2, 1254, 'ENAMEL_COPPER_WIRE', 1),
+(26, 1.219, 1650, 'ENAMEL_COPPER_WIRE', 1),
+(27, 1.22, 100, 'ENAMEL_COPPER_WIRE', 1),
+(28, 1.232, 80, 'ENAMEL_COPPER_WIRE', 1),
+(29, 1.3, 1265, 'ENAMEL_COPPER_WIRE', 1),
+(30, 1.42, 950, 'ENAMEL_COPPER_WIRE', 1),
+(31, 1.655, 2935.62, 'ENAMEL_COPPER_WIRE', 1),
+(32, 1.7, 500, 'ENAMEL_COPPER_WIRE', 1),
+(33, 1.71, 232.12, 'ENAMEL_COPPER_WIRE', 1),
+(34, 1.75, 165.26, 'ENAMEL_COPPER_WIRE', 1),
+(35, 2.05, 1430, 'ENAMEL_COPPER_WIRE', 1),
+(36, 6, 504, 'WRAPPED_SECTION', 1),
+(37, 1.7, 6320, 'WRAPPED_SECTION', 1),
+(38, 2, 603, 'WRAPPED_SECTION', 1),
+(39, 2.5, 250, 'WRAPPED_SECTION', 1),
+(40, 3.75, 2375, 'WRAPPED_SECTION', 1),
+(41, 1.1, 375, 'WRAPPED_SECTION', 1),
+(42, 3, 50, 'BARE_STRIP', 1),
+(43, 2.4, 1650, 'BARE_STRIP', 1),
+(44, 4.75, 1100, 'BARE_STRIP', 1),
+(45, 3.75, 3125, 'BARE_STRIP', 1),
+(46, 4.5, 500, 'BARE_STRIP', 1),
+(47, 1.1, 125, 'BARE_STRIP', 1),
+(48, 0.3, 918, 'BARE_WIRE', 1),
+(49, 70, 1020, 'BARE_WIRE', 1),
+(50, 0.46, 832, 'BARE_WIRE', 1),
+(51, 4.22, 1260, 'BARE_WIRE', 1),
+(52, 0.593, 82, 'BARE_WIRE', 1),
+(53, 1.2, 45, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(54, 1.3, 69, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(55, 1.4, 36, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(56, 1.5, 42, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(57, 1.6, 27, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(58, 1.7, 29, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(59, 1.8, 240, 'SUBMERSIBLE_COPPER_WIRE', 1),
+(60, 1.016, 75, 'ALUMINIUM_ENAMEL_WIRE', 1),
+(61, 0.914, 118, 'ALUMINIUM_ENAMEL_WIRE', 1),
+(62, 0.81, 126, 'ALUMINIUM_ENAMEL_WIRE', 1),
+(63, 0.71, 120, 'ALUMINIUM_ENAMEL_WIRE', 1),
+(64, 0.61, 94, 'ALUMINIUM_ENAMEL_WIRE', 1),
+(65, 0.559, 72, 'ALUMINIUM_ENAMEL_WIRE', 1);
+
+-- SUBTYPES
+INSERT INTO ENAMEL_COPPER_WIRE (SR_NO, SIZE_SWG, REELS, REMARKS) VALUES
+(1, NULL, 2, 'SOFT H-50'),
+(2, NULL, 97, 'SOFT H-50'),
+(3, NULL, 1, 'SOFT H-50'),
+(4, NULL, 1, 'For sky power'),
+(5, 'SWG-22', NULL, 'CONTINUE H50 2 LINE'),
+(6, 'SWG-22', 87, 'H50'),
+(7, 'SWG-21.5', 28, 'SOFT H-50'),
+(8, NULL, 133, 'For Hikmat pump'),
+(9, NULL, 23, 'For Hikmat pump'),
+(10, 'SWG-21', 127, 'SOFT H-50'),
+(11, 'SWG-21', 54, 'SOFT H-50'),
+(12, NULL, 22, 'For Jili Mechanical'),
+(13, NULL, 23, 'For Hikmat pump'),
+(14, NULL, 144, 'Jili Rejection'),
+(15, NULL, 3, 'For sky power'),
+(16, NULL, 23, 'For Meeran Int'),
+(17, NULL, 22, 'For K-E'),
+(18, NULL, 20, 'For Jili Mechanical'),
+(19, NULL, 14, 'SOFT H-50'),
+(20, NULL, 94, 'SOFT H-50'),
+(21, NULL, 2, 'SOFT H-50'),
+(22, 'SWG-19', 45, 'SOFT H-50'),
+(23, NULL, 6, 'SOFT H-50'),
+(24, NULL, 23, 'For JF IND'),
+(25, NULL, 57, 'FOR United Sialkot'),
+(26, 'SWG-18', 72, 'SOFT H-50'),
+(27, NULL, 5, 'For sky power'),
+(28, NULL, 6, 'SOFT V-70'),
+(29, NULL, 55, 'SOFT V-70'),
+(30, NULL, 47, 'SOFT V-70'),
+(31, NULL, 125, 'For PEL'),
+(32, NULL, 23, 'SOFT V-70'),
+(33, NULL, 9, 'For JF IND'),
+(34, NULL, 7, 'For sky power'),
+(35, NULL, 139, 'For Sky power');
+
+INSERT INTO WRAPPED_SECTION (SR_NO, REELS) VALUES
+(36, 18),
+(37, 6),
+(38, 2),
+(39, 1),
+(40, 19),
+(41, 3);
+
+INSERT INTO BARE_STRIP (SR_NO, REELS) VALUES
+(42, NULL),
+(43, NULL),
+(44, NULL),
+(45, NULL),
+(46, NULL),
+(47, NULL);
+
+INSERT INTO BARE_WIRE (SR_NO, REELS) VALUES
+(48, 18),
+(49, 6),
+(50, 64),
+(51, 7),
+(52, 1);
+
+INSERT INTO SUBMERSIBLE_COPPER_WIRE (SR_NO, NO_OF_COILS, REMARKS) VALUES
+(53, 45, NULL),
+(54, 69, NULL),
+(55, 36, NULL),
+(56, 42, NULL),
+(57, 27, NULL),
+(58, 29, NULL),
+(59, 30, NULL);
+
+INSERT INTO ALUMINIUM_ENAMEL_WIRE (SR_NO, SIZE_SWG, REELS, REMARKS) VALUES
+(60, 'SWG-19', 75, NULL),
+(61, 'SWG-20', 118, NULL),
+(62, 'SWG-21', 126, NULL),
+(63, 'SWG-22', 120, NULL),
+(64, 'SWG-23', 94, 'CONTINUE H-35'),
+(65, 'SWG-24', 72, 'CONTINUE H-35');
+
+
+SELECT * FROM PARTY;
+
+SELECT * FROM MAINTENANCE;
+
+SELECT * FROM FACTORY_PRODUCTION;
